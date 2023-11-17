@@ -55,3 +55,30 @@ A12=[cos(q(i)) -cos(alfa(i))*sin(q(i))  sin(alfa(i))*sin(q(i)) a(i)*cos(q(i));..
    0 0 0 1]
 
 T = A01 * A12
+
+disp('EJERCICIO 3 ')
+q=[-pi/4 -pi/2 -pi/4-pi/2];
+d=[1 5 0];
+a=[0 0 4];
+alfa=[-pi/2 -pi/2 0];
+
+%%
+i=1;
+A01=[cos(q(i)) -cos(alfa(i))*sin(q(i))  sin(alfa(i))*sin(q(i)) a(i)*cos(q(i));...
+   sin(q(i))  cos(alfa(i))*cos(q(i)) -sin(alfa(i))*cos(q(i)) a(i)*sin(q(i));...
+   0          sin(alfa(i))            cos(alfa(i))           d(i);...
+   0 0 0 1]
+
+i=2;
+A12=[cos(q(i)) -cos(alfa(i))*sin(q(i))  sin(alfa(i))*sin(q(i)) a(i)*cos(q(i));...
+   sin(q(i))  cos(alfa(i))*cos(q(i)) -sin(alfa(i))*cos(q(i)) a(i)*sin(q(i));...
+   0          sin(alfa(i))            cos(alfa(i))           d(i);...
+   0 0 0 1]
+
+i=3;
+A23=[cos(q(i)) -cos(alfa(i))*sin(q(i))  sin(alfa(i))*sin(q(i)) a(i)*cos(q(i));...
+   sin(q(i))  cos(alfa(i))*cos(q(i)) -sin(alfa(i))*cos(q(i)) a(i)*sin(q(i));...
+   0          sin(alfa(i))            cos(alfa(i))           d(i);...
+   0 0 0 1]
+
+T=A01*A12*A23
